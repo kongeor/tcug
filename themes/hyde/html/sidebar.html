@@ -1,0 +1,25 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+          <a href="{{index-uri}}">{{title}}</a>
+        </a>
+      </h1>
+      <p class="lead">{{ description }}</p>
+    </div>
+
+      <nav class="sidebar-nav">
+          <a class="sidebar-nav-item" {% if home %} class="active" {% endif %} href="{{index-uri}}">Home</a>
+          <a class="sidebar-nav-item" {% if archives %} class="active" {% endif %} href="{{archives-uri}}">Archives</a>
+          {% for nav-page in navbar-pages %}
+              <a {%ifequal page.uri nav-page.uri %} class="active" {% endifequal %} href="{{nav-page.uri}}">{{nav-page.title}}</a>
+          {% endfor %}
+
+          <a class="sidebar-nav-item" href="https://monk.cons.gr/subscription/form">Newsletter</a>
+          <a class="sidebar-nav-item" href="{{rss-uri}}">RSS</a>
+      </nav>
+
+    <p>&#127279; {{today|date:yyyy}} - {{author}}</p>
+    <p>Powered by <a href="http://cryogenweb.org">Cryogen</a></p>
+  </div>
+</div>
