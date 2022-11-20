@@ -1,7 +1,7 @@
 {:site-title                   "TCUG"
  :author                       "Kostas"
  :description                  "Thessaloniki Clojure User Group"
- :site-url                     "https://kongeor.github.io/tcug"
+ :site-url                     "https://kongeor.github.io/tcug/"
  :post-root                    "posts"
  :page-root                    "pages"
  :post-root-uri                "posts"
